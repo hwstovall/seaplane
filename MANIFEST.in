@@ -1,2 +1,8 @@
 include README.md
 include seaplane/example/*
+include seaplane/example/charts/*
+include seaplane/example/charts/demo/*
+include seaplane/example/charts/demo/templates/*
+include seaplane/example/docker/*
+include seaplane/example/docker/seaplane-example/*
+include seaplane/configuration/defaults.json
