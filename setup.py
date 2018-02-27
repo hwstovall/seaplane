@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='seaplane',
-      version='0.1',
+      version='0.1.1',
       description='A simple tool to help get local Kubernetes projects up and running.',
       url='https://github.com/hwstovall/seaplane',
       download_url='https://github.com/hwstovall/seaplane/archive/0.1.tar.gz',
