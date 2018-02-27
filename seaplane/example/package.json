@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Example server.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js -g"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

@@ -1,0 +1,3 @@
+name: Seaplane Example
+description: A simple Django server started by seaplane.
+version: 1.0.0
