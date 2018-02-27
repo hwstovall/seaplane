@@ -13,7 +13,7 @@ setup(name='seaplane',
           'colorama',
       ],
       include_package_data=True,
-      pymodules=['seaplane.script'],
+      packages=['seaplane'],
       entry_points='''
             [console_scripts]
             seaplane=seaplane.script:seaplane
