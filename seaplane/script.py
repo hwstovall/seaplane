@@ -50,11 +50,12 @@ def init(recommended, example):
     if not check_requirements(recommended):
         return
 
-    print('\nIf you haven\'t added {hostname} to your hosts file, add the following line now.'.format(
-        hostname=get_value('project_hostname')))
-    print('{ip}     {hostname}\n'.format(
-        ip=check_output_str(['minikube', 'ip']).strip(),
-        hostname=get_value('project_hostname')))
+    if minikube.is_running:
+        print('\nIf you haven\'t added {hostname} to your hosts file, add the following line now.'.format(
+            hostname=get_value('project_hostname')))
+        print('{ip}     {hostname}\n'.format(
+            ip=check_output_str(['minikube', 'ip']).strip(),
+            hostname=get_value('project_hostname')))
 
     info_log('Ensuring your project has the directory structure and files Seaplane expects.')
     ensure_directories()
@@ -84,6 +85,10 @@ def start():
     helm.upgrade(name=get_value('project_name'),
                  chart=directories.get_chart(get_value('development_chart')),
                  namespace=get_value('namespace'))
+
+    print('Your project, {project}, is now starting at http://{hostname}'.format(
+        project=get_value('project_name'),
+        hostname=get_value('project_hostname')))
 
 
 @seaplane.command()
