@@ -5,6 +5,13 @@ purposefully simple and limited to local development.
 Under the hood, seaplane is just calling Docker, Helm, and Minikube. You're not bound to any proprietary file formats 
 or tools.
 
+## Installation
+Seaplane requires Python 3. To install simply run:
+
+```bash
+pip install --user seaplane
+```
+
 ## Commands
 ### `seaplane init`
 Check for all required packages. If any packages need to be installed, it will direct you
