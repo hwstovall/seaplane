@@ -3,7 +3,6 @@
   "docker_directory": "docker",
   "charts_directory": "charts",
   "development_chart": "development",
-  "kube_system_chart": "kube_system",
   "namespace": "example-ns",
   "project_name": "example",
   "project_hostname": "example.test",
